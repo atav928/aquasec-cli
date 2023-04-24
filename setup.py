@@ -5,7 +5,7 @@ import os.path
 from setuptools import setup, find_packages
 
 __version__ = None
-readme = '' # pylint: disable=invalid-name
+readme = ''  # pylint: disable=invalid-name
 with open('requirements.txt', encoding='utf-8') as f:
     requirements = f.read().splitlines()
 here = os.path.abspath(os.path.dirname(__file__))
@@ -27,7 +27,7 @@ setup(
     install_requires=requirements,
     url='https://github.com/atav928/aquasec-cli',
     keywords=['aquasec', 'aqua security', 'workload protection', 'cli'],
-    entry_points = {
+    entry_points={
         'console_scripts': ['aquasec-cli=aquasec_cli.main:cli']
     },
     long_description=readme,
