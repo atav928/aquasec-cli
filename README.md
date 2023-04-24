@@ -53,11 +53,18 @@ Are you sure you want to delete the auth api token? [y/N]: y
 Deleted Auth
 ```
 
+## Release Info
+
+### v0.0.2
+
+* Bug fix with requirements
+
 ## Version
 
 | Version | Build | Changes |
 | ------- | ----- | ------- |
-| __0.0.1__ | __a1__ | issues with dataclasses getting installed under normal condition |
+| __0.0.2__ | __a1__ | issues with dataclasses getting installed under normal condition |
+| __0.0.2__ | __final__ | tested in pytest and seems to now accept the dataclass |
 
 ### Warnings
 
