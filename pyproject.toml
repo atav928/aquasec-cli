@@ -15,13 +15,14 @@ classifiers = [
     "Programming Language :: Python :: 3",
 ]
 dependencies = [
-    "aquasec-api==0.0.2",
+    "aquasec-api==0.0.3",
     "click>=8.1.3",
     "dataclasses>=0.6",
     "PyYAML>=6.0",
     'importlib-metadata; python_version<"3.8"',
 ]
-dynamic = ["version", "readme"]
+dynamic = ["version", "readme", "entry-points"]
+
 
 [project.scripts]
 aquasec-cli = "aquasec_cli.main:cli"
@@ -30,9 +31,8 @@ aquasec-cli = "aquasec_cli.main:cli"
 repository = "https://github.com/atav928/aquasec-cli"
 
 [tool.setuptools.dynamic]
-readme = {file = ["README.rst", "SECURITY.md"], content-type = "text/mardown"}
+readme = {file = ["README.rst", "SECURITY.md"], content-type = "text/markdown"}
 version = {attr = "aquasec_cli.__version__"}
 
 [tools.setuptools.packages]
 find = {}
-
