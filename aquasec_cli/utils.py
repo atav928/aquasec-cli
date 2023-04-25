@@ -16,7 +16,7 @@ def get_tmpdir() -> Path:
     return tempdir
 
 
-def abort_if_false(ctx, param, value):
+def abort_if_false(ctx, param, value): # pylint: disable=unused-argument
     """Abort Value if false
 
     Args:
