@@ -55,6 +55,12 @@ Deleted Auth
 
 ## Release Info
 
+### v0.0.3
+
+* Fixed installation and dependencies
+* locked down dependencies
+* added toml and setup.cfg to support furture installations
+
 ### v0.0.2
 
 * Bug fix with requirements
@@ -69,9 +75,7 @@ Deleted Auth
 | __0.0.3__ | __a3__ | migrating to toml and setup.cfg |
 | __0.0.3__ | __a4__ | cleaned up utils and updated snyk to confirm pass locally; added to git ignore |
 | __0.0.3__ | __a5__ | setup.cfg issues wiht pip |
-| __0.0.3__ | __a6__ | continual issues with setup.cfg migrated to toml config |
-| __0.0.3__ | __a7__ | toml issues |
-| __0.0.3__ | __a7__ | toml issues with dynamic configuration |
+| __0.0.3__ | __final__ | found issue with toml and other dependencies |
 
 ### Warnings
 
