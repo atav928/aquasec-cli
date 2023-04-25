@@ -66,6 +66,8 @@ Deleted Auth
 | __0.0.2__ | __a1__ | issues with dataclasses getting installed under normal condition |
 | __0.0.2__ | __final__ | tested in pytest and seems to now accept the dataclass |
 | __0.0.3__ | __a1__ | issues with dataclasses and now yaml getting installed under normal condition |
+| __0.0.3__ | __a3__ | migrating to toml and setup.cfg |
+| __0.0.3__ | __a4__ | cleaned up utils and updated snyk to confirm pass locally; added to git ignore |
 
 ### Warnings
 
