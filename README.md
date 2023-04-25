@@ -71,6 +71,7 @@ Deleted Auth
 | __0.0.3__ | __a5__ | setup.cfg issues wiht pip |
 | __0.0.3__ | __a6__ | continual issues with setup.cfg migrated to toml config |
 | __0.0.3__ | __a7__ | toml issues |
+| __0.0.3__ | __a7__ | toml issues with dynamic configuration |
 
 ### Warnings
 

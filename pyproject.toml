@@ -21,7 +21,7 @@ dependencies = [
     "PyYAML>=6.0",
     'importlib-metadata; python_version<"3.8"',
 ]
-dynamic = ["version", "readme", "entry-point"]
+dynamic = ["version", "readme", "entry-points", "scripts"]
 
 [project.scripts]
 aquasec-cli = "aquasec_cli.main:cli"
