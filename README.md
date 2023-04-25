@@ -42,7 +42,7 @@ __Run Report:__
 ```bash
 aquasec-cli  reports --report_type kube_bench --report_location /Users/username/var/tmp
 Report completed Saving
-Report written out to /Users/adamt/var/tmp/aquasec_report_type_kube_bench_20230424T153825.json
+Report written out to /Users/username/var/tmp/aquasec_report_type_kube_bench_20230424T153825.json
 ```
 
 __Delete API Auth:__
