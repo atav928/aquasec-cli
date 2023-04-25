@@ -55,6 +55,10 @@ Deleted Auth
 
 ## Release Info
 
+### v0.0.4
+
+* fixed issue with broken aquasec-api v0.0.3
+
 ### v0.0.3
 
 * Fixed installation and dependencies
