@@ -16,7 +16,7 @@
 # For more examples, including how to limit scans to only high-severity issues
 # and fail PR checks, see https://github.com/snyk/actions/
 
-name: Snyk Security
+name: CI Publish, with security check using Snyk
 
 on:
   push:
@@ -39,7 +39,8 @@ jobs:
       - name: Set up Snyk CLI to check for security issues
         # Snyk can be used to break the build when it detects security issues.
         # In this case we want to upload the SAST issues to GitHub Code Scanning
-        uses: snyk/actions/setup@806182742461562b67788a64410098c9d9b96adb
+        # uses: snyk/actions/setup@806182742461562b67788a64410098c9d9b96adb
+        uses: snyk/actions/python@master
 
         # For Snyk Open Source you must first set up the development environment for your application's dependencies
         # For example for Node
