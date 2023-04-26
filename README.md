@@ -80,6 +80,8 @@ Deleted Auth
 | __0.0.3__ | __a4__ | cleaned up utils and updated snyk to confirm pass locally; added to git ignore |
 | __0.0.3__ | __a5__ | setup.cfg issues wiht pip |
 | __0.0.3__ | __final__ | found issue with toml and other dependencies |
+| __0.0.4__ | __final__ | fixed issue with aquaapi dependency |
+| __0.0.5__ | __a1__ | fixed readme to point to md file; adjusting snyk |
 
 ### Warnings
 

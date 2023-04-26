@@ -10,7 +10,7 @@ authors = [
 description = "Aqua Security cli"
 requires-python = ">=3.8"
 keywords = ['aquasec', 'aqua security', 'workload protection']
-license = {file = "LICENSE"}
+license = {file = "LICENSE", content-type = "text"}
 classifiers = [
     "Programming Language :: Python :: 3",
 ]
@@ -31,7 +31,7 @@ aquasec-cli = "aquasec_cli.main:cli"
 repository = "https://github.com/atav928/aquasec-cli"
 
 [tool.setuptools.dynamic]
-readme = {file = ["README.rst", "SECURITY.md"], content-type = "text/markdown"}
+readme = {file = ["README.md", "SECURITY.md"], content-type = "text/markdown"}
 version = {attr = "aquasec_cli.__version__"}
 
 [tools.setuptools.packages]
