@@ -13,7 +13,7 @@ Aqua Security CLI
 __Help Menu of all Groups:__
 
 ```bash
-aquasec-cli  --help    
+>>> aquasec-cli --help
 Usage: aquasec-cli [OPTIONS] COMMAND [ARGS]...
 
   AquaSec CLI tool to manage AquaSec Tenant
@@ -22,8 +22,8 @@ Options:
   --help  Show this message and exit.
 
 Commands:
-  delapi   Deletes created API Auth
-  initapi  Initializes API Auth
+  delete   Deletes created API Auth
+  init     Initializes API Auth
   reports  Generate CIS Bench Reports
 ```
 
@@ -40,9 +40,9 @@ INFO    : Created WorkloadAuth Token for URL https://1234abcff1.cloud.aquasec.co
 __Run Report:__
 
 ```bash
-aquasec-cli  reports --report_type kube_bench --report_location /Users/username/var/tmp
+aquasec-cli  reports --report_type kube_bench --report_location /var/tmp
 Report completed Saving
-Report written out to /Users/username/var/tmp/aquasec_report_type_kube_bench_20230424T153825.json
+Report written out to /var/tmp/aquasec_report_type_kube_bench_20230424T153825.json
 ```
 
 __Delete API Auth:__
@@ -54,6 +54,11 @@ Deleted Auth
 ```
 
 ## Release Info
+
+### v0.0.5
+
+* Updated Readme and changed type from RST to MD
+* Reverted snyk workflow file
 
 ### v0.0.4
 
