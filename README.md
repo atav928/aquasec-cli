@@ -87,6 +87,7 @@ Deleted Auth
 | __0.0.3__ | __final__ | found issue with toml and other dependencies |
 | __0.0.4__ | __final__ | fixed issue with aquaapi dependency |
 | __0.0.5__ | __a1__ | fixed readme to point to md file; adjusting snyk |
+| __0.0.5__ | __final__ | tested and released |
 
 ### Warnings
 
