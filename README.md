@@ -89,6 +89,7 @@ Deleted Auth
 | __0.0.5__ | __a1__ | fixed readme to point to md file; adjusting snyk |
 | __0.0.5__ | __final__ | tested and released |
 | __0.0.6__ | __a1__ | removed README.rst updated snyk |
+| __0.0.6__ | __a2__ | make delete more efficent |
 
 ### Warnings
 
