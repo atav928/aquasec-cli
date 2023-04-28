@@ -3,6 +3,7 @@
 
 import os
 import pickle
+import contextlib
 from pathlib import Path
 import click
 from aquasec.api import API
@@ -39,8 +40,7 @@ def delete():
     """
     tmpdir = get_tmpdir()
     pkl_filename = Path.joinpath(tmpdir, 'aqua_api.pkl')
-    try:
+    # Use supress to suppress error if file is already deleted
+    with contextlib.suppress(FileNotFoundError):
         os.remove(pkl_filename)
-    except FileNotFoundError:
-        pass
     click.secho("Deleted Auth", color="green")
