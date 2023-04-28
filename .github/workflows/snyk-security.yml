@@ -33,22 +33,22 @@ jobs:
       contents: read # for actions/checkout to fetch code
       security-events: write # for github/codeql-action/upload-sarif to upload SARIF results
       actions: read # only required for a private repository by github/codeql-action/upload-sarif to get the Action run status
-    security:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@master
-        - name: Run Snyk to check for vulnerabilities
-          uses: sync/actions/python-3.8@master
-          continue-on-error: true # To make sure that SARIF upload gets called
-          env:
-            SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-          with:
-            args: --sarif-file-output=snyk.sarif
-          # Runs Snyk Open Source (SCA) analysis and uploads result to Snyk.
-        - name: Snyk Open Source Monitor
-          run: snyk monitor --all-projects
-          # Push the Snyk Code results into GitHub Code Scanning tab
-        - name: Upload results to GitHub Code Scanning
-          uses: github/codeql-action/upload-sarif@v2
-          with:
-            sarif_file: synk.sarif
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Run Snyk to check for vulnerabilities
+        uses: sync/actions/python-3.8@master
+        continue-on-error: true # To make sure that SARIF upload gets called
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          args: --sarif-file-output=snyk.sarif
+        # Runs Snyk Open Source (SCA) analysis and uploads result to Snyk.
+      - name: Snyk Open Source Monitor
+        run: snyk monitor --all-projects
+        # Push the Snyk Code results into GitHub Code Scanning tab
+      - name: Upload results to GitHub Code Scanning
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: synk.sarif
