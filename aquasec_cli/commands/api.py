@@ -15,11 +15,7 @@ from aquasec_cli.utils import (abort_if_false, get_tmpdir, reformat_exception)
 @click.option("--csp_roles", default=["api_auditor"], type=click.STRING, multiple=True, help="Creates Aquasec auth token")
 @click.option("--endpoints", default=["ANY"], type=click.STRING, multiple=True, help="Endpoint Call Allowed")
 def init(csp_roles, endpoints):
-    """Initializes API Auth
-
-    Args:
-        csp_roles (_type_): _description_
-        endpoints (_type_): _description_
+    """Initializes API Authentication token used to run commands; required to generate before a command can be executed
     """
     click.echo("Initializing API")
     try:

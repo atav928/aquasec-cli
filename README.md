@@ -27,6 +27,50 @@ Commands:
   reports  Generate CIS Bench Reports
 ```
 
+```bash
+>>> aquasec-cli init --help   
+Usage: aquasec-cli init [OPTIONS]
+
+  Initializes API Authentication token used to run commands; required to
+  generate before a command can be executed
+
+Options:
+  --csp_roles TEXT  Creates Aquasec auth token
+  --endpoints TEXT  Endpoint Call Allowed
+  --help            Show this message and exit.
+```
+
+```bash
+>>> aquasec-cli reports --help
+Usage: aquasec-cli reports [OPTIONS]
+
+  Generate CIS Bench Reports
+
+  Used to generate CIS Bench Reports in different formats
+
+Options:
+  -r, --report_type [cis|kube_bench|linux|openshift|disa_stig|all]
+                                  Report type to genorate
+  -c, --cluster_name TEXT         Supply Cluster name
+  -l, --report_location TEXT      Directory to write out report to; please
+                                  ensure proper formatting given the system
+                                  you are on  [required]
+  --report_format [list|flat_list|raw]
+                                  Report Format
+  --help                          Show this message and exit.
+```
+
+```bash
+>>> aquasec-cli delete --help
+Usage: aquasec-cli delete [OPTIONS]
+
+  Deletes created API Auth
+
+Options:
+  --yes
+  --help  Show this message and exit.
+```
+
 __NOTE:__ Each subcommand has a help menu to assist with the calls being made. This project relies on the yaml or localized configurations being help as they are not passed in the commands as of this release.
 
 __Create API Auth Token:__
@@ -40,7 +84,7 @@ INFO    : Created WorkloadAuth Token for URL https://1234abcff1.cloud.aquasec.co
 __Run Report:__
 
 ```bash
-aquasec-cli  reports --report_type kube_bench --report_location /var/tmp
+aquasec-cli  reports --report_type kube_bench --report_location /var/tmp --report_format list
 Report completed Saving
 Report written out to /var/tmp/aquasec_report_type_kube_bench_20230424T153825.json
 ```
