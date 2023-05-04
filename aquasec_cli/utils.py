@@ -26,3 +26,14 @@ def abort_if_false(ctx, param, value): # pylint: disable=unused-argument
     """
     if not value:
         ctx.abort()
+
+def reformat_exception(error: Exception) -> str:
+    """Reformates Exception to print out as a string pass for logging
+
+    Args:
+        error (Exception): _description_
+
+    Returns:
+        str: _description_
+    """
+    return f"{type(error).__name__}: {str(error)}" if error else ""
